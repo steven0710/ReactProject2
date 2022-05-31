@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ToDoForm from './components/ToDoForm';
 import ToDoItem from './components/ToDoItem';
 import CompletedForm from './components/CompletedForm';
+import CompletedItem from './components/CompletedItem';
 
 /**
  * This App should:
@@ -96,7 +97,7 @@ export default function App() {
       <h1>Completed Tasks</h1>
       <CompletedForm updateToDo={updateToDo} />
       {completedState.map((singleToDo) => (
-        <ToDoItem
+        <CompletedItem
           updateToDo={updateComplete}
           singleToDo={singleToDo}
           key={singleToDo.id}

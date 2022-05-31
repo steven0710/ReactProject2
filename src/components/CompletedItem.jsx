@@ -1,7 +1,7 @@
 import React from 'react';
-import { BiCheckCircle } from 'react-icons/bi';
+import { RiCloseCircleLine } from 'react-icons/ri';
 
-const ToDoItem = ({ singleToDo, updateToDo }) => {
+function CompletedItem({ singleToDo, updateToDo }) {
   return (
     <div
       className={singleToDo.completed ? 'todo-row complete' : 'todo-row'}
@@ -9,13 +9,13 @@ const ToDoItem = ({ singleToDo, updateToDo }) => {
     >
       {singleToDo.text}
       <div className="iconsContainer">
-        <BiCheckCircle
+        <RiCloseCircleLine
           className="icon"
           onClick={() => updateToDo(singleToDo.id)}
         />
       </div>
     </div>
   );
-};
+}
 
-export default ToDoItem;
+export default CompletedItem;
